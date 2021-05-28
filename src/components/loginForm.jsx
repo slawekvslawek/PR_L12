@@ -50,6 +50,11 @@ class LoginForm extends Component {
         });
     };
 
+    handleChangeRoute = () => {
+       this.props.history.push('/');
+       window.location.reload();
+    };
+
     handleChange = (event) => {
         const account = {...this.state.account};
         account[event.currentTarget.name] = event.currentTarget.value;
